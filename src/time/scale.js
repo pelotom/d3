@@ -7,6 +7,7 @@ import "../scale/linear";
 import "../scale/nice";
 import "format";
 import "day";
+import "doy";
 import "hour";
 import "minute";
 import "month";
@@ -105,9 +106,13 @@ var d3_time_scaleSteps = [
   432e5,  // 12-hour
   864e5,  // 1-day
   1728e5, // 2-day
-  6048e5, // 1-week
-  2592e6, // 1-month
-  7776e6, // 3-month
+  4320e5, // 5-day
+  8640e5, // 10-day
+  1728e6, // 20-day
+  4320e6, // 50-day
+  // 6048e5, // 1-week
+  // 2592e6, // 1-month
+  // 7776e6, // 3-month
   31536e6 // 1-year
 ];
 
@@ -124,11 +129,17 @@ var d3_time_scaleLocalMethods = [
   [d3_time.hour, 3],
   [d3_time.hour, 6],
   [d3_time.hour, 12],
-  [d3_time.day, 1],
-  [d3_time.day, 2],
-  [d3_time.week, 1],
-  [d3_time.month, 1],
-  [d3_time.month, 3],
+  // [d3_time.day, 1],
+  // [d3_time.day, 2],
+  [d3_time.doy, 1],
+  [d3_time.doy, 2],
+  [d3_time.doy, 5],
+  [d3_time.doy, 10],
+  [d3_time.doy, 20],
+  [d3_time.doy, 50],
+  // [d3_time.week, 1],
+  // [d3_time.month, 1],
+  // [d3_time.month, 3],
   [d3_time.year, 1]
 ];
 
